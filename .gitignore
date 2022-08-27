@@ -1,0 +1,9 @@
+.venv/
+
+obj_*
+*.hex
+*.elf
+*.map
+
+.gitmodules/
+qmk_firmware/
