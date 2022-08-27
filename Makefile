@@ -14,9 +14,6 @@ gitsubmodule:
 	git submodule foreach git pull origin master
 	git submodule foreach make git-submodule
 
-qmk-setup:
-	qmk setup -H ./qmk_firmware
-
 all: $(KEYBOARDS)
 
 .PHONY: $(KEYBOARDS)
@@ -33,7 +30,7 @@ $(KEYBOARDS):
 	cd qmk_firmware; qmk lint -km $(USER) -kb $(PATH_$@) --strict
 
 	# run build
-	make BUILD_DIR=$(shell pwd)/../build -j1 -C qmk_firmware $(PATH_$@):$(USER)
+	make BUILD_DIR=$(shell pwd)/build -j1 -C qmk_firmware $(PATH_$@):$(USER)
 
 	# cleanup symlinks
 	for f in $(KEYBOARDS); do rm -rf qmk_firmware/keyboards/$(PATH_$@)/keymaps/$(USER); done
