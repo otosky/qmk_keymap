@@ -4,8 +4,7 @@ KEYBOARDS = reviung34
 PATH_reviung34 = reviung/reviung34
 
 venv:
-	python -m venv .venv && source .venv/bin/activate
-	python -m pip install --upgrade pip
+	[ -d ".venv" ] || (python -m venv .venv && source .venv/bin/activate)
 	pip install qmk
 
 gitsubmodule:
@@ -13,6 +12,8 @@ gitsubmodule:
 	git submodule update --init --recursive
 	git submodule foreach git pull origin master
 	git submodule foreach make git-submodule
+
+setup: venv gitsubmodule
 
 all: $(KEYBOARDS)
 
