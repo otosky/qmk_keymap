@@ -30,7 +30,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                            LT(NAV, KC_SPC),   LT(MOUSE, KC_TAB), LT(SYM, KC_ENT),   LT(NUM, KC_BSPC)
 ),
 
-#if defined MIRYOKKC_NOV_VI
 [NAV] = LAYOUT_reviung34(
   RESET,   KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
   KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NO,    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_CAPS,
@@ -43,20 +42,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NO,    KC_ALGR, KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
                              KC_NO,    KC_NO,    KC_MSTP, KC_MPLY
 ),
-#else
-[NAV] = LAYOUT_reviung34(
-  RESET,   KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
-  KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NO,    KC_CAPS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
-  KC_NO,    KC_ALGR, KC_NO,    KC_NO,    KC_NO,    KC_INS,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,
-                             KC_NO,    KC_NO,    KC_ESC,  KC_BSPC
-),
-[MEDIA] = LAYOUT_reviung34(
-  RESET,   KC_NO,    KC_NO,    KC_NO,    KC_NO,    RGB_TOG, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI,
-  KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NO,    KC_NO,    KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT,
-  KC_NO,    KC_ALGR, KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
-                             KC_NO,    KC_NO,    KC_MSTP, KC_MPLY
-),
-#endif
 
 [MOUSE] = LAYOUT_reviung34(
   RESET,   KC_NO,    KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_MS_U, KC_NO,    KC_NO,
