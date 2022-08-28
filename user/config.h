@@ -3,6 +3,7 @@
 // to save memory
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
+#define NO_DEBUG
 
 // default but used in macros
 #undef TAPPING_TERM
@@ -30,4 +31,3 @@
 
 // Recommended for heavy chording.
 #define QMK_KEYS_PER_SCAN 4
-
