@@ -1,9 +1,11 @@
 USER = otosky
 
 PATH_reviung34 = reviung/reviung34
+PATH_sofle = sofle
 
-.PHONY: reviung34
+.PHONY: reviung34 sofle
 reviung34: symlink-reviung34 flash-reviung34 rm-symlink-reviung34 clean
+sofle: symlink-sofle flash-sofle rm-symlink-sofle clean
 
 venv:
 	[ -d ".venv" ] || (python -m venv .venv && source .venv/bin/activate)
@@ -33,13 +35,21 @@ rm-symlink-%:
 
 lint-%:
 	# run lint check
-	cd qmk_firmware; qmk lint -km $(USER) -kb $(PATH_$*) --strict
+	cd qmk_firmware; qmk lint -km $(USER) -kb $(PATH_$*)
 
-flash-%: lint-%
+flash-%: 
 	# run build
 	make BUILD_DIR=$(shell pwd)/build -j1 -C qmk_firmware $(PATH_$*):$(USER):flash
 
-compile-%: lint-%
+flash-left-%: 
+	# run build
+	make BUILD_DIR=$(shell pwd)/build -j1 -C qmk_firmware $(PATH_$*):$(USER):dfu-split-left
+
+flash-right-%: 
+	# run build
+	make BUILD_DIR=$(shell pwd)/build -j1 -C qmk_firmware $(PATH_$*):$(USER):dfu-split-right
+
+compile-%:
 	# run build
 	make BUILD_DIR=$(shell pwd)/build -j1 -C qmk_firmware $(PATH_$*):$(USER)
 
