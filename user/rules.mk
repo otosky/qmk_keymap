@@ -2,8 +2,8 @@ MOUSEKEY_ENABLE = yes # Mouse keys
 EXTRAKEY_ENABLE = yes # Audio control and System control
 LEADER_ENABLE = yes
 COMBO_ENABLE = yes
+INTROSPECTION_KEYMAP_C = combo.c # needed to pass introspection
 
-SRC += combo.c 
 SRC += otosky.c 
 EXTRAFLAGS += -flto
 

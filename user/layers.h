@@ -13,7 +13,7 @@ enum layers {
   MOUSE,
   SYM,
   NUM,
-  FUN
+  FUN,
 };
 
 enum layer_keycodes {

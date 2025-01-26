@@ -11,7 +11,7 @@ const uint16_t PROGMEM _W_F[]       = {KC_W, KC_F, COMBO_END};
 const uint16_t PROGMEM _C_D[]       = {KC_C, KC_D, COMBO_END};
 const uint16_t PROGMEM _H_COMM[]    = {KC_H, KC_COMM, COMBO_END};
 
-combo_t key_combos[COMBO_COUNT] = {
+combo_t key_combos[] = {
     COMBO(SP_BSPC, LT(FUN, KC_ESC)),
     COMBO(SP_ENT, KC_CAPS),
     COMBO(_X_C, KC_Z),
