@@ -36,10 +36,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [MOUSE] = LAYOUT(
   KC_NO,   KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,                         KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
-  KC_NO,   KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,                         KC_NO,   KC_NO,   KC_MS_U, KC_NO,   KC_NO,   KC_NO,
-  KC_NO,   KC_LGUI,  KC_LALT,  KC_LCTL,  KC_LSFT,  KC_NO,                         KC_NO,   KC_MS_L, KC_MS_D, KC_MS_R, KC_NO,   KC_NO,
-  KC_NO,   KC_NO,    KC_ALGR,  KC_NO,    KC_NO,    KC_NO,  MO(FUN),       KC_NO,  KC_BTN2, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, KC_NO,
-                              KC_NO, KC_NO, KC_NO, KC_NO,    KC_NO,       KC_BTN1, KC_BTN3, KC_NO, KC_NO, KC_NO
+  KC_NO,   KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,                         KC_NO,   KC_NO,   MS_UP,   KC_NO,   KC_NO,   KC_NO,
+  KC_NO,   KC_LGUI,  KC_LALT,  KC_LCTL,  KC_LSFT,  KC_NO,                         KC_NO,   MS_LEFT, MS_DOWN, MS_RGHT, KC_NO,   KC_NO,
+  KC_NO,   KC_NO,    KC_ALGR,  KC_NO,    KC_NO,    KC_NO,  MO(FUN),       KC_NO,  MS_BTN2, MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, KC_NO,
+                              KC_NO, KC_NO, KC_NO, KC_NO,    KC_NO,       MS_BTN1, MS_BTN3, KC_NO, KC_NO, KC_NO
 ),
 
 [NUM] = LAYOUT(
